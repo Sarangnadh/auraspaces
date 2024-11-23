@@ -96,7 +96,7 @@ const Footer = () => {
   
       
       </ul>
-      <p class="text-xs text-gray-500 mt-4">&copy; 2024.AuraSpaces. All rights reserved.</p>
+      <p class="text-xs text-gray-500 mt-4">&copy; 2024.AuraSpace. All rights reserved.</p>
   
     </div>
   </footer>
