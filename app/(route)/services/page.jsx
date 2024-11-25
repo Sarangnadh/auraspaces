@@ -52,7 +52,7 @@ const page = () => {
           <h3 className="mt-4 text-lg font-semibold text-gray-800">
             {step.title}
           </h3>
-          <p className="mt-2 text-sm text-gray-600">{step.description}</p>
+          <h3 className="mt-1 text-lg font-semibold text-gray-800">{step.description}</h3>
           {index < steps.length - 1 && (
             <div className="absolute right-[-20px] top-[50%] translate-y-[-50%] w-12 h-0.5 bg-blue-500" />
           )}
