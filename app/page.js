@@ -10,6 +10,7 @@ export default function Home() {
             Inspiration for home interior designs </h1>
           <p className="mt-2"> Give your home a new look with these interior design ideas curated for you</p>
         </div>
+        <Status />
 
         <div className=" grid grid-cols-3 mt-3  ">
           <div className="row-span-3 flex flex-col-3 gap-3 mt-4">
@@ -35,7 +36,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <Status />
       </div>
       
 
