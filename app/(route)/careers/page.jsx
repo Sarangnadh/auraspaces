@@ -25,10 +25,17 @@ const page = () => {
             <a href="#">Apply Now</a>
           </div>
           <div className="job">
-            <h3>Project Manager</h3>
+            <h3> Assistant Project Manager</h3>
             <p><strong>Location:</strong> On-site</p>
             <p><strong>Type:</strong> Full-time</p>
-            <p>Lead our projects to success with excellent management and organizational skills.</p>
+            <p>Assist our projects to success with excellent management and organizational skills.</p>
+            <a href="#">Apply Now</a>
+          </div>
+          <div className="job">
+            <h3>Junior HR Executive</h3>
+            <p><strong>Location:</strong> On-site</p>
+            <p><strong>Type:</strong> Full-time</p>
+            <p>Drive employee engagement and support HR operations.</p>
             <a href="#">Apply Now</a>
           </div>
         </div>
