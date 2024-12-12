@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </div>
 
-     
+
 
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section: Living Room Image */}
@@ -70,37 +70,37 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
-  {/* Left Section: Living Room Description */}
-  <div className="sm:w-1/2 sm:mr-8 text-gray-700">
-    <h2 className="text-xl sm:text-2xl font-bold text-indigo-600 mb-4">Living Room Interiors</h2>
-    <p className="mb-4">
-      The living room is the heart of your home, a space where you relax, entertain guests, and create memories. Our designs focus on enhancing this vital area with functionality, elegance, and warmth.
-    </p>
-    <p className="mb-4">
-      Key features include carefully chosen color schemes, comfortable seating arrangements, and stylish decor elements. From contemporary layouts to cozy traditional designs, we tailor the living room to reflect your personal taste.
-    </p>
-    <p className="mb-4">
-      We prioritize creating a harmonious blend of aesthetics and practicality. Whether you're looking for minimalist vibes or opulent luxury, our living room ideas aim to elevate your space to its full potential.
-    </p>
-    <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
-      Explore Living Room Designs
-    </button>
-  </div>
+        {/* Left Section: Living Room Description */}
+        <div className="sm:w-1/2 sm:mr-8 text-gray-700">
+          <h2 className="text-xl sm:text-2xl font-bold text-indigo-600 mb-4">Living Room Interiors</h2>
+          <p className="mb-4">
+            The living room is the heart of your home, a space where you relax, entertain guests, and create memories. Our designs focus on enhancing this vital area with functionality, elegance, and warmth.
+          </p>
+          <p className="mb-4">
+            Key features include carefully chosen color schemes, comfortable seating arrangements, and stylish decor elements. From contemporary layouts to cozy traditional designs, we tailor the living room to reflect your personal taste.
+          </p>
+          <p className="mb-4">
+            We prioritize creating a harmonious blend of aesthetics and practicality. Whether you're looking for minimalist vibes or opulent luxury, our living room ideas aim to elevate your space to its full potential.
+          </p>
+          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
+            Explore Living Room Designs
+          </button>
+        </div>
 
-  {/* Right Section: Living Room Image */}
-  <div className="sm:w-1/2 text-center sm:text-right mt-6 sm:mt-0">
-    <Image
-      className="border rounded-3xl shadow-lg"
-      src="/3drendering.jpg"
-      alt="3D Luxury Living Room"
-      width={650}
-      height={800}
-    />
-  </div>
-</div>
+        {/* Right Section: Living Room Image */}
+        <div className="sm:w-1/2 text-center sm:text-right mt-6 sm:mt-0">
+          <Image
+            className="border rounded-3xl shadow-lg"
+            src="/3drendering.jpg"
+            alt="3D Luxury Living Room"
+            width={650}
+            height={800}
+          />
+        </div>
+      </div>
 
 
-<div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section: Living Room Image */}
         <div className="sm:w-1/2 text-center sm:text-left">
           <Image
@@ -114,18 +114,17 @@ export default function Home() {
 
         {/* Right Section: Bedroom Interior Description */}
         <div className="sm:w-1/2 mt-6 sm:mt-0 sm:ml-8 text-gray-700">
-          <h2 className="text-xl sm:text-2xl font-bold text-indigo-600 mb-4">Bedroom Interiors</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-indigo-600 mb-4">Kitchen Interiors</h2>
           <p className="mb-4">
-            Transform your bedroom into a sanctuary of peace and style with our curated interior design ideas. From cozy minimalism to luxurious modern aesthetics, we offer a variety of options to suit your taste and needs.
+            The kitchen is the cornerstone of every home, a space where culinary creativity meets functionality. Our modern kitchen designs blend efficiency with elegance, creating a hub that is both practical and inviting.          </p>
+          <p className="mb-4">
+            From sleek modular layouts to rustic farmhouse aesthetics, we offer a range of ideas tailored to your preferences. Key features include smart storage solutions, high-quality countertops, and state-of-the-art appliances.
           </p>
           <p className="mb-4">
-            Our designs focus on creating an ambiance that promotes relaxation and comfort, featuring soothing color palettes, plush furniture, and intelligent lighting. Whether you're redesigning your master bedroom or a guest room, our ideas aim to elevate your space with functionality and elegance.
-          </p>
-          <p className="mb-4">
-          Our designs focus on optimizing space and workflow, ensuring that every inch of your kitchen serves a purpose. Whether you prefer a vibrant splash of color or a minimalist monochrome look, we help you achieve the perfect balance of style and functionality.
+            Our designs focus on optimizing space and workflow, ensuring that every inch of your kitchen serves a purpose. Whether you prefer a vibrant splash of color or a minimalist monochrome look, we help you achieve the perfect balance of style and functionality.
           </p>
           <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
-          Explore Kitchen Designs
+            Explore Kitchen Designs
           </button>
         </div>
       </div>

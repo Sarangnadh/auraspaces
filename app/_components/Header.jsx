@@ -11,18 +11,24 @@ const Header = () => {
         {
             id: 2,
             name: 'What We Do',
-            path: '/services'
+            path: '/whatwedo'
         },
         {
-            id: 3,
+            id:3,
+            name:'Career',
+            path:"/careers"
+        },
+        {
+            id: 4,
             name: 'Contact Us',
             path: '/contact-us'
         },
         {
-            id: 4,
+            id: 5,
             name: 'About',
             path: "/about"
-        }
+        },
+   
     ]
 
   return (
@@ -47,6 +53,7 @@ const Header = () => {
                     ))}
 
                 </ul>
+                
             </div>
         </div>
     </>
