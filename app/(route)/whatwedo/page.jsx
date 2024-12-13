@@ -40,12 +40,15 @@ const page = () => {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [modalHeading, setModalHeading] = useState("")
 
-  const toggleModal = () => setIsOpen(!isOpen);
-
+  const toggleModal = (heading = "") => {
+    setIsOpen(!isOpen);
+    setModalHeading(heading);
+  };
   const modalVariants = {
-      hidden: { opacity: 0, scale: 0.8 },
-      visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
   };
   return (
     <div className="flex flex-col items-center p-8 bg-gray-100">
@@ -93,7 +96,7 @@ const page = () => {
       <div>
 
       </div>
-{/* 1 */}
+      {/* 1 */}
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section:  Image */}
         <div className="sm:w-1/2 text-center sm:text-left">
@@ -120,12 +123,12 @@ const page = () => {
           <p className="mb-4">
             Finalization of drawings in mutual agreement. Drawings sent to the factory for production.
           </p>
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
+          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700" onClick={() => toggleModal("Meet Our Interior Designer")}>
             Meet Our Interior Designer
           </button>
         </div>
       </div>
-{/* 2 */}
+      {/* 2 */}
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section:  Description */}
         <div className="sm:w-1/2 sm:mr-8 text-gray-700">
@@ -139,7 +142,7 @@ const page = () => {
           <p className="mb-4">
             Production is scheduled on a date in agreement with client, as per confirmation of site status by project manager.
           </p>
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
+          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700" onClick={() => toggleModal("Get Customized Home Interior")}>
             Get Customized Home Interior
           </button>
         </div>
@@ -156,7 +159,7 @@ const page = () => {
         </div>
       </div>
 
-{/* 3 */}
+      {/* 3 */}
 
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section:  */}
@@ -181,12 +184,12 @@ const page = () => {
           <p className="mb-4">
             Number of days expected for installation as per the volume of work is informed to client.
           </p>
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700">
-          Plan an Interior Project    
-             </button>
+          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700" onClick={() => toggleModal("Plan an Interior Project ")}>
+            Plan an Interior Project
+          </button>
         </div>
       </div>
-{/* 4 */}
+      {/* 4 */}
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section:  Description */}
         <div className="sm:w-1/2 sm:mr-8 text-gray-700">
@@ -200,9 +203,9 @@ const page = () => {
           <p className="mb-4">
             Production is scheduled on a date in agreement with client, as per confirmation of site status by project manager.
           </p>
-          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700" onClick={toggleModal}>
-          Deal Directly with the Company         
-           </button>
+          <button className="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700" onClick={() => toggleModal("Deal Directly with the Company")}>
+            Deal Directly with the Company
+          </button>
         </div>
 
         {/* Right Section:  Image */}
@@ -216,103 +219,79 @@ const page = () => {
           />
         </div>
       </div>
-      
-     
-            {isOpen && (
-                <motion.div
-                    className="modal"
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                    variants={modalVariants}
-                    style={{
-                        position: 'fixed',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        background: 'white',
-                        padding: '20px',
-                        borderRadius: '10px',
-                        boxShadow: '0px 5px 15px rgba(0,0,0,0.2)',
-                        width: '300px',
-                    }}
+
+
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          variants={modalVariants}
+        >
+          <div className="bg-white rounded-lg p-6 shadow-lg w-96">
+            <h2 className="text-lg font-bold mb-4">{modalHeading}</h2>
+            <form>
+              <div style={{ marginBottom: '10px' }}>
+                <label>Name:</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full border rounded-lg p-2"
+                  required
+                />
+              </div>
+
+              <div style={{ marginBottom: '10px' }}>
+                <label>Email ID:</label>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full border rounded-lg p-2"
+                                    required
+                />
+              </div>
+
+              <div style={{ marginBottom: '10px' }}>
+                <label>Mobile Number:</label>
+                <input
+                  type="tel"
+                  placeholder="Enter your mobile number"
+                   className="w-full border rounded-lg p-2"
+                  required
+                />
+              </div>
+
+
+
+              <div style={{ marginBottom: '10px' }}>
+                <label>Project Location:</label>
+                <input
+                  type="text"
+                  placeholder="Enter location"
+                  className="w-full border rounded-lg p-2"
+                  required
+                />
+              </div>
+              <div className="flex justify-between mt-4">
+                <button type="submit" className="bg-indigo-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-indigo-700">
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  onClick={toggleModal}
+                  className="bg-red-500 text-white px-6 py-2 rounded-md font-semibold hover:bg-red-600"
                 >
-                    <h2>Enter Your Details</h2>
-                    <form>
-                        <div style={{ marginBottom: '10px' }}>
-                            <label>Name:</label>
-                            <input 
-                                type="text" 
-                                placeholder="Enter your name" 
-                                style={{ width: '100%', padding: '5px', marginTop: '5px' }} 
-                                required 
-                            />
-                        </div>
+                  Close
+                </button>
+              </div>
 
-                        <div style={{ marginBottom: '10px' }}>
-                            <label>Email ID:</label>
-                            <input 
-                                type="email" 
-                                placeholder="Enter your email" 
-                                style={{ width: '100%', padding: '5px', marginTop: '5px' }} 
-                                required 
-                            />
-                        </div>
+            </form>
+          </div>
+        </motion.div>
 
-                        <div style={{ marginBottom: '10px' }}>
-                            <label>Mobile Number:</label>
-                            <input 
-                                type="tel" 
-                                placeholder="Enter your mobile number" 
-                                style={{ width: '100%', padding: '5px', marginTop: '5px' }} 
-                                required 
-                            />
-                        </div>
+      )}
 
-        
-
-                        <div style={{ marginBottom: '10px' }}>
-                            <label>Location:</label>
-                            <input 
-                                type="text" 
-                                placeholder="Enter location" 
-                                style={{ width: '100%', padding: '5px', marginTop: '5px' }} 
-                                required 
-                            />
-                        </div>
-
-                        <button 
-                            type="submit" 
-                            style={{
-                                background: '#4CAF50',
-                                color: 'white',
-                                padding: '10px 20px',
-                                border: 'none',
-                                borderRadius: '5px',
-                                cursor: 'pointer',
-                            }}
-                        >
-                            Submit
-                        </button>
-                        <button 
-                            type="button" 
-                            onClick={toggleModal} 
-                            style={{
-                                background: 'red',
-                                color: 'white',
-                                padding: '10px 20px',
-                                border: 'none',
-                                borderRadius: '5px',
-                                cursor: 'pointer',
-                                marginLeft: '10px',
-                            }}
-                        >
-                            Close
-                        </button>
-                    </form>
-                </motion.div>
-            )}
-        
 
     </div>
 
