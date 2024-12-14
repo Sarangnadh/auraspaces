@@ -19,14 +19,19 @@ const Header = () => {
             path:"/careers"
         },
         {
-            id: 4,
-            name: 'Contact Us',
-            path: '/contact-us'
+            id:4,
+            name:'Services',
+            path:"/services"
         },
         {
             id: 5,
             name: 'About',
             path: "/about"
+        },
+        {
+            id: 6,
+            name: 'Contact Us',
+            path: '/contact-us'
         },
    
     ]

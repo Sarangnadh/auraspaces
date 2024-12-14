@@ -51,7 +51,7 @@ const page = () => {
     visible: { opacity: 1, scale: 1 },
   };
   return (
-    <div className="flex flex-col items-center p-8 bg-gray-100">
+    <div className="flex flex-col items-center p-8 bg-gray-200">
       <div className="flex flex-row items-center justify-between w-full max-w-5xl gap-6">
         {steps.map((step, index) => (
           <motion.div
@@ -79,23 +79,28 @@ const page = () => {
             </h3>
             {index < steps.length - 1 && (
               <motion.div
-                className="absolute right-[-30px] top-[50%] translate-y-[-50%] w-12 h-0.5 bg-blue-500"
+                className="absolute right-[-30px] top-[50%] translate-y-[-50%]"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
               >
-                <motion.div
-                  className="w-2 h-2 bg-blue-500 absolute top-[-4px] right-[-6px] rotate-45"
-                  style={{ clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" }}
-                />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+
+
+                  <motion.path
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
+                  />
+                </svg>
               </motion.div>
             )}
+
           </motion.div>
         ))}
       </div>
-      <div>
 
-      </div>
       {/* 1 */}
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
         {/* Left Section:  Image */}
@@ -248,7 +253,7 @@ const page = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="w-full border rounded-lg p-2"
-                                    required
+                  required
                 />
               </div>
 
@@ -257,7 +262,7 @@ const page = () => {
                 <input
                   type="tel"
                   placeholder="Enter your mobile number"
-                   className="w-full border rounded-lg p-2"
+                  className="w-full border rounded-lg p-2"
                   required
                 />
               </div>
@@ -274,7 +279,7 @@ const page = () => {
                 />
               </div>
               <div className="flex justify-between mt-4">
-                <button type="submit" className="bg-indigo-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-indigo-700">
+                <button type="submit" className="bg-green-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-green-700">
                   Submit
                 </button>
                 <button

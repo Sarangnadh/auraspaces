@@ -4,7 +4,7 @@ import Status from "./_components/Status";
 export default function Home() {
   return (
     <div>
-      <div>
+      
         <div className="text-center mt-3">
           <h1 className="text-3xl font-bold sm:text-4xl  text-indigo-600">
             Inspiration for home interior designs </h1>
@@ -15,7 +15,7 @@ export default function Home() {
           <div className="row-span-3 flex flex-col-3 gap-3 mt-4">
 
             <Image
-              className="border rounded-3xl"
+              className="border rounded-3xl "
               src='/hotelbedroom.jpg'
               width={650}
               height={800}
@@ -28,14 +28,14 @@ export default function Home() {
               height={800}
             />
             <Image
-              className="border rounded-3xl"
+              className="border rounded-3xl mr-1"
               src='/3droom.jpg'
               width={650}
               height={800}
             />
           </div>
         </div>
-      </div>
+      
 
 
 
