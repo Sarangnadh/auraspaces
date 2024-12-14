@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Import useRouter
+import { useRouter } from 'next/navigation'; 
 
 const Page = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter(); 
 
   const [isOpen, setIsOpen] = useState(false);
   const [modalHeading, setModalHeading] = useState("");
@@ -21,7 +21,6 @@ const Page = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission
     console.log('Form submitted:', {
       name,
       email,
@@ -31,7 +30,7 @@ const Page = () => {
     });
 
     alert('Your application has been submitted!');
-    router.push('/'); // Redirect to the home page
+    router.push('/'); 
   };
 
   return (
