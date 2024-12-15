@@ -52,54 +52,61 @@ const page = () => {
   };
   return (
     <div className="flex flex-col items-center p-8 bg-gray-200">
-      <div className="flex flex-row items-center justify-between w-full max-w-5xl gap-6">
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.id}
-            className="flex flex-col items-center text-center relative"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-          >
-            <div className="border-black bg-blue-700 rounded-full shadow-lg p-4">
-              <motion.img
-                src={step.icon}
-                alt={step.title}
-                className="w-16 h-16 bg-white"
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.3 + 0.2 }}
-              />
-            </div>
-            <h3 className="mt-4 text-lg font-semibold text-gray-800">
-              {step.title}
-            </h3>
-            <h3 className="mt-1 text-lg font-semibold text-gray-800">
-              {step.description}
-            </h3>
-            {index < steps.length - 1 && (
-              <motion.div
-                className="absolute right-[-30px] top-[50%] translate-y-[-50%]"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-
-
-                  <motion.path
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
-                  />
-                </svg>
-              </motion.div>
-            )}
-
-          </motion.div>
-        ))}
+      <div className="flex flex-wrap items-center justify-center w-full max-w-5xl gap-6 px-4 md:justify-between">
+  {steps.map((step, index) => (
+    <motion.div
+      key={step.id}
+      className="flex flex-col items-center text-center relative w-full sm:w-auto max-w-xs"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.3 }}
+    >
+      <div className="border-black bg-blue-700 rounded-full shadow-lg p-4">
+        <motion.img
+          src={step.icon}
+          alt={step.title}
+          className="w-16 h-16 bg-white rounded-full"
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.3 + 0.2 }}
+        />
       </div>
+      <h3 className="mt-4 text-lg font-semibold text-gray-800">
+        {step.title}
+      </h3>
+      <h3 className="mt-1 text-base text-gray-700">{step.description}</h3>
+      {index < steps.length - 1 && (
+        <motion.div
+          className="absolute hidden sm:block right-[-30px] top-[50%] translate-y-[-50%]"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+            <motion.path
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.3 + 0.5 }}
+            />
+          </svg>
+        </motion.div>
+      )}
+    </motion.div>
+  ))}
+</div>
+
 
       {/* 1 */}
       <div className="flex flex-col sm:flex-row items-center justify-center py-8 bg-gray-200 px-4">
